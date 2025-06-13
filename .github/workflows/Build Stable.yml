@@ -14,7 +14,7 @@ jobs:
     - name: Setup build kernel environment
       run: |
         sudo apt update
-        sudo apt install libc6-dev clang flex bison libssl-dev bc python3 python2 zip unzip git lld llvm
+        sudo apt install libc6-dev clang flex bison libssl-dev bc python3 zip unzip git lld llvm
         mkdir -p $GITHUB_WORKSPACE/kernel_workspace
         
     - name: Download Proton-clang
@@ -32,7 +32,7 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/ksu_kernel_xiaomi_lisa
         rm -rf KernelSU/
-        curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s v0.9.5
+        curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s
         
     - name: Compiling Kernel
       run: |
